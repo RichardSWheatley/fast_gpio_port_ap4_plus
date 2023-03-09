@@ -1,4 +1,4 @@
-// Fast 8-bit port example
+// Fast port example
 // Mariusz Lacina, Ambiq, 2023
 //*****************************************************************************
 #include <stdint.h>
@@ -12,7 +12,7 @@
 
 
 //=============================================================================
-//  FAST GPIO PORT
+//  FAST GPIO PORT 
 //=============================================================================
 #define GPIO_FGPIO_0	0
 #define GPIO_FGPIO_1	1
@@ -228,7 +228,7 @@ uint32_t	wr_data=0XAAAA, rd_data;
 		gpio_config(false); 	//switch off output drivers, pull-ups or pull-down can be active
 		rd_data = fgpio_read();
 		
-		gpio_config(true); 	//switch off output drivers, pull-ups or pull-down can be active
+		gpio_config(true); 	//switch on output drivers, pull-ups or pull-down can be active
 		rd_data = fgpio_read();
 		
  		am_util_delay_ms(100);	
