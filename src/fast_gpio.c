@@ -21,6 +21,8 @@
 #include "am_bsp.h"
 #include "am_util.h"
 
+#define SPEED_TEST    1
+
 //=============================================================================
 //
 //  FAST GPIO PORT
@@ -210,9 +212,9 @@ main ( void )
     gpio_config(true);
 
 #if SPEED_TEST
-	//
-	// Speed test loop
-	//
+    //
+    // Speed test loop
+    //
     while(1)
     {
         fgpio_write(0xaaaa);
